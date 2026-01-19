@@ -1,37 +1,39 @@
-# FastAPI Iris Prediction API
+# API Prediksi Iris dengan FastAPI
 
-Simple FastAPI service for Iris prediction using a pickled scikit-learn KNeighborsClassifier.
+Layanan FastAPI sederhana untuk prediksi Iris menggunakan model scikit-learn (KNeighborsClassifier).
 
-## Requirements
+## Persyaratan
 - Python 3.10+
 
-## Usage With Makefile
-Build the virtual environment and install dependencies:
+## Penggunaan dengan Makefile
+Bangun virtual environment dan install dependency:
 
 ```bash
 make build
 ```
 
-Run the API server:
+Jalankan server API:
 
 ```bash
 make run
 ```
 
-You can also use:
+Alternatif:
 
 ```bash
 make up
 ```
 
-## Test With Swagger UI
-After the server is running, open:
+Hentikan server dengan `Ctrl+C`.
+
+## Uji Dengan Swagger UI
+Setelah server berjalan, buka:
 
 ```
 http://127.0.0.1:8000/docs
 ```
 
-Use this JSON body in `/predict`:
+Gunakan body JSON ini di `/predict`:
 
 ```json
 {
@@ -42,12 +44,12 @@ Use this JSON body in `/predict`:
 }
 ```
 
-Expected response:
+Contoh respons:
 ```json
 {"status":"success","prediction":0,"label":"Iris-setosa"}
 ```
 
-Examples for each class:
+Contoh untuk setiap kelas:
 
 Iris-setosa (0)
 ```json
@@ -79,7 +81,7 @@ Iris-virginica (3)
 }
 ```
 
-## Run Without Makefile
+## Jalankan Tanpa Makefile
 macOS/Linux:
 
 ```bash
@@ -98,8 +100,10 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-## Model File
-The API expects `model.pkl` in the project root. You can regenerate it with:
+Hentikan server dengan `Ctrl+C`.
+
+## File Model
+API membutuhkan `model.pkl` di root project. Untuk membuat ulang:
 
 macOS/Linux:
 
@@ -113,4 +117,7 @@ Windows:
 .\.venv\Scripts\python train_model.py
 ```
 
-The training data comes from `source_code/Iris-Classification-WebApp/Iris.csv`.
+Data training diambil dari `source_code/Iris-Classification-WebApp/Iris.csv`.
+
+## Dokumentasi API
+Detail endpoint dan contoh request/response ada di `api.md`.
