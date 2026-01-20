@@ -121,3 +121,7 @@ Data training diambil dari `source_code/Iris-Classification-WebApp/Iris.csv`.
 
 ## Dokumentasi API
 Detail endpoint dan contoh request/response ada di `api.md`.
+
+## Dokumentasi Tambahan
+- Panduan Makefile untuk pemula: `readme_makefile.md`
+- Referensi endpoint API: `api.md`
