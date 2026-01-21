@@ -6,6 +6,11 @@ Layanan FastAPI sederhana untuk prediksi Iris menggunakan model scikit-learn (KN
 - Python 3.10+
 
 ## Penggunaan dengan Makefile
+Catatan Windows:
+- Makefile ini memakai shell POSIX (contoh: `. .venv/Scripts/activate`), jadi jalankan lewat WSL2 atau Git Bash/MSYS2, bukan PowerShell.
+- Jika belum punya `make`, lihat panduan Windows di `README_Makefile.md`.
+- Jika tidak ingin memasang `make`, gunakan langkah "Jalankan Tanpa Makefile" di bawah.
+
 Bangun virtual environment dan install dependency:
 
 ```bash

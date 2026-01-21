@@ -65,7 +65,40 @@ Ini cara yang lebih ringkas. Kamu cukup mengingat beberapa perintah.
 - Python 3.10+
 - `make` terpasang
   - macOS/Linux: biasanya sudah ada.
-  - Windows: gunakan WSL, Git Bash, atau install `make` via package manager.
+  - Windows: gunakan WSL2 atau Git Bash/MSYS2. Lihat bagian "Windows: instalasi make" di bawah.
+
+### Windows: instalasi make
+Makefile ini memakai shell POSIX (contoh: `. .venv/Scripts/activate`), jadi jalankan `make` dari WSL2 atau Git Bash/MSYS2. Jika tetap di PowerShell, gunakan langkah manual di atas.
+
+#### Opsi 1: WSL2 (disarankan)
+1. Install WSL2 (PowerShell Admin):
+   ```powershell
+   wsl --install
+   ```
+2. Buka terminal Ubuntu/WSL, lalu install make:
+   ```bash
+   sudo apt update && sudo apt install -y make
+   ```
+3. Masuk ke folder project dari WSL (contoh):
+   ```bash
+   cd /mnt/c/Users/<nama>/path/project-fastapi-iris
+   ```
+4. Jalankan:
+   ```bash
+   make build
+   make run
+   ```
+
+#### Opsi 2: Git Bash atau MSYS2 (tanpa WSL)
+1. Install Git for Windows (Git Bash) atau MSYS2.
+2. Install `make` (pilih salah satu):
+   - Scoop: `scoop install make`
+   - Chocolatey: `choco install make`
+   - MSYS2: `pacman -S make`
+3. Buka Git Bash/MSYS2 di folder project, lalu cek:
+   ```bash
+   make --version
+   ```
 
 ### Perintah yang tersedia
 Di bawah ini ada dua bagian:
