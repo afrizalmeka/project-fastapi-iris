@@ -19,7 +19,7 @@ def predict_data(
     label_map = {
         0: "Iris-setosa",
         1: "Iris-versicolor",
-        3: "Iris-virginica",
+        2: "Iris-virginica",
     }
     return {
         "status": "success",

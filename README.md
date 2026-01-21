@@ -71,7 +71,7 @@ Iris-versicolor (1)
 }
 ```
 
-Iris-virginica (3)
+Iris-virginica (2)
 ```json
 {
   "sepal_length": 6.9,

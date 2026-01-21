@@ -53,7 +53,7 @@ Response 200:
 Mapping kelas:
 - `0` -> `Iris-setosa`
 - `1` -> `Iris-versicolor`
-- `3` -> `Iris-virginica`
+- `2` -> `Iris-virginica`
 
 Contoh curl:
 
